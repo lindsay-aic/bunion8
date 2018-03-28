@@ -5,7 +5,7 @@ import org.springframework.stereotype.Repository;
 
 
 @Repository
-public interface SeriesInfoRepository extends JpaRepository<SeriesInfo, Long> {
+public interface MoviesInfoRepository extends JpaRepository<MovieInfo, Long> {
 
 	
 	

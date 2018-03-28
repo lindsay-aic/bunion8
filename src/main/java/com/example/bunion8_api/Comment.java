@@ -22,7 +22,7 @@ public class Comment {
 	
 	@OneToMany(cascade = CascadeType.ALL,
 			fetch=FetchType.LAZY,
-			mappedBy="seriesInfo")
+			mappedBy="movieInfo")
 	private Set<Comment> comments = new HashSet<>();
 	
 	
@@ -34,8 +34,8 @@ public class Comment {
 
 
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name="series_id", nullable=false)
-	private SeriesInfo seriesInfo;
+	@JoinColumn(name="movie_id", nullable=false)
+	private MovieInfo movieInfo;
 
 
 
@@ -53,8 +53,8 @@ public class Comment {
 
 
 
-	public SeriesInfo getSeriesInfo() {
-		return seriesInfo;
+	public MovieInfo getMovieInfo() {
+		return movieInfo;
 	}
 
 	public void setBody(String body) {
@@ -65,8 +65,8 @@ public class Comment {
 		this.comments = comments;
 	}
 	
-	public void setSeriesInfo(SeriesInfo seriesInfo) {
-		this.seriesInfo = seriesInfo;
+	public void setMovieInfo(MovieInfo movieInfo) {
+		this.movieInfo = movieInfo;
 	}
 
 }
